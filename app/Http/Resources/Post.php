@@ -21,7 +21,7 @@ class Post extends JsonResource
             'content' => $this->content,
             'created_at_ts' => strtotime($this->created_at),
             'image_url' => Image::find($this->image_id),
-            'count_of_comments' => Comment::where('post_id', $this->id)->count(),
+            'count_of_comments' => Comment::where('post_id', $this->id)->count(), //пункт 6.2
         ];
     }
 }
